@@ -19,6 +19,6 @@ export class UserService {
   }
 
   save(user: UserModel): Observable<UserModel>{
-    return this.httpClient.post<UserModel>(`${this.API}/cadastro`, user);
+    return this.httpClient.post<UserModel>(`${this.API}`, user);
   }
 }

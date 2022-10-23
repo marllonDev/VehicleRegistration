@@ -78,16 +78,8 @@ public class VehicleService {
         if (findID.isEmpty()){
             throw new VehicleException("Veiculo não disponivel para edição!");
         }
-        Vehicle newVehicleupdated = new Vehicle();
-        newVehicleupdated.setVeiculo(vehicle.getVeiculo());
-        newVehicleupdated.setMarca(vehicle.getMarca());
-        newVehicleupdated.setDescricao(vehicle.getDescricao());
-        newVehicleupdated.setAno(vehicle.getAno());
-        newVehicleupdated.setCor(vehicle.getCor());
-        newVehicleupdated.setVendido(vehicle.isVendido());
-        newVehicleupdated.setUpdated(formatDate());
-
-        return vehicleRepository.save(newVehicleupdated);
+        vehicle.setUpdated(formatDate());
+        return vehicleRepository.save(vehicle);
     }
 
 

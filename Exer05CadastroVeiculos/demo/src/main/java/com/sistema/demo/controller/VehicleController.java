@@ -20,17 +20,17 @@ public class VehicleController {
     private final VehicleService vehicleService;
 
 
-    @ResponseStatus(value = HttpStatus.OK)
-    @GetMapping
-    public List<Vehicle> findAllVehicle() throws VehicleException{
-        return vehicleService.findAllVehicles();
-    }
+//    @ResponseStatus(value = HttpStatus.OK)
+//    @GetMapping
+//    public List<Vehicle> findAllVehicle() throws VehicleException{
+//        return vehicleService.findAllVehicles();
+//    }
 
     @ResponseStatus(value = HttpStatus.OK)
-    @GetMapping("/{marca}/{ano}/{cor}")
-    public List<Vehicle> findVehicle(@PathVariable @RequestParam("marca") String marca,
-                                     @PathVariable @RequestParam("ano") Integer ano,
-                                     @PathVariable @RequestParam("cor") String cor) throws VehicleException {
+    @GetMapping
+    public List<Vehicle> findVehicle(@RequestParam(value = "marca", required = false) String marca,
+                                     @RequestParam(value = "ano",required = false) Integer ano,
+                                     @RequestParam(value = "cor", required = false) String cor) throws VehicleException {
         return vehicleService.findVehicle(marca, ano, cor);
     }
 

@@ -1,1 +1,48 @@
-<p>vechile-registration works!</p>
+<p>
+      <mat-form-field appearance="standard">
+            <mat-label>Veiculo</mat-label>
+            <input matInput placeholder="Placeholder">
+      </mat-form-field>
+</p>
+<p>
+      <mat-form-field appearance="standard">
+            <mat-label>Marca</mat-label>
+            <input matInput placeholder="Placeholder">
+      </mat-form-field>
+</p>
+<p>
+      <mat-form-field appearance="standard">
+            <mat-label>Ano</mat-label>
+            <input matInput placeholder="Placeholder">
+      </mat-form-field>
+</p>
+<p>
+      <mat-form-field appearance="standard">
+            <mat-label>Descrição</mat-label>
+            <input matInput placeholder="Placeholder">
+      </mat-form-field>
+</p>
+<p>
+      <mat-form-field appearance="standard">
+            <mat-label>Cor</mat-label>
+            <input matInput placeholder="Placeholder">
+      </mat-form-field>
+</p>
+
+<form [formGroup]="options">
+      <div>
+        <label>Vendido: </label>
+        <mat-radio-group [formControl]="floatLabelControl">
+          <mat-radio-button value="sim">Sim</mat-radio-button>
+          <mat-radio-button value="Não">Não</mat-radio-button>
+        </mat-radio-group>
+      </div>
+</form>
+
+<section>
+      <div class="example-label"></div>
+      <div class="example-button-row">
+        <button mat-flat-button color="Criar">Criar</button>
+        <button mat-flat-button color="Cancelar">Cancelar</button>
+      </div>
+</section>
